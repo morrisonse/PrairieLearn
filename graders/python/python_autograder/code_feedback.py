@@ -26,18 +26,20 @@ THE SOFTWARE.
 
 
 class GradingComplete(Exception):
-    '''
+    """
     A general exception to mark that grading has completed early.
     All future test cases are skipped.
-    '''
+    """
+
     pass
 
 
 class GradingTestFailed(Exception):
-    '''
+    """
     A general exception to mark that some failure of the current
     test case has occurred.  Future test cases will still be executed.
-    '''
+    """
+
     pass
 
 
