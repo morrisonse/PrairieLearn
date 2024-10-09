@@ -4,11 +4,12 @@ By default, course instances and assessments are only accessible to [course staf
 
 ## Two level of access control for assessments
 
-In PrairieLearn there are two levels of access control for students to gain access to assessments:
+In PrairieLearn, student access to assessments is split across two levels: **course instance** and **assessment instance**. Students need to be allowed access at both the **course** and **assessment** level in order to see assignments. (Think of how in order to take a physical test, a student would both need to be in the right classroom and have a copy of the physical exam!) In both cases, the `allowAccess` format is used to grant access and allow instructors to impose common access restrictions such as start time, time limits, and even passwords.
 
-1. First, a student must have access to the **course instance**. This access is granted with the `allowAccess` rules in [infoCourseInstance.json](courseInstance.md). Giving a student access to a course instance allows the student to enroll in the course instance, but does not by itself grant them access to any assessments in the course instance.
+The `allowAccess` format in [infoCourseInstance.json](courseInstance.md) grants students access to the specific **course**. It does not grant access to any individual assessments, but a student must be enrolled in a course to be able to see their assignments.
 
-2. Second, a student must also have access to the specific **assessment**. This access is granted with the `allowAccess` rules in [infoAssessment.json](assessment.md). Even if a student has been granted access to an assessment, however, they will only be able to actually access it if they also have access to the course instance (see previous item).
+The `allowAccess` format in [infoAssessment.json](assessment.md) grants students access to each **assessment**. This is where most instructors set restrictions on a per-assignment basis. Remember that if a student cannot access a direct link to an assessment, they may need to enroll in the course instance first.
+
 
 ## `allowAccess` format
 
